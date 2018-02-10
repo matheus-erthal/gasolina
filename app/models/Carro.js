@@ -1,8 +1,8 @@
 class Carro{
 
-    constructor(modelo, consumo){
+    constructor(modelo, marca){
         this._modelo = modelo;
-        this._consumo = consumo;
+        this._marca = marca;
         Object.freeze(this);
     }
 
@@ -10,8 +10,8 @@ class Carro{
         return this._modelo;
     }
 
-    get consumo(){
-        return this._consumo;
+    get marca(){
+        return this._marca;
     }
     
 }

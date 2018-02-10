@@ -9,6 +9,9 @@ class CarroController{
 
         this.lista = [];
 
+        this._tabela = new CarrosView($('#tabela_carros'));
+        this._tabela.update(this.lista);
+
     }
 
     adiciona(event){
@@ -16,7 +19,7 @@ class CarroController{
         event.preventDefault();
         this.lista.push(this.criaCarro());
         this.limpaForm();
-
+        this._tabela.update(this.lista);
         console.log(this.lista);
 
     }
