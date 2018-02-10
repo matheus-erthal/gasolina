@@ -1,13 +1,13 @@
 class Carro{
 
-    constructor(nome, consumo){
-        this._nome = nome;
+    constructor(modelo, consumo){
+        this._modelo = modelo;
         this._consumo = consumo;
         Object.freeze(this);
     }
 
-    get nome(){
-        return this._nome;
+    get modelo(){
+        return this._modelo;
     }
 
     get consumo(){

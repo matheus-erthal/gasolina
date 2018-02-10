@@ -3,7 +3,7 @@ class User{
     constructor(nome, localizacao, carro){
         this._nome = nome;
         this._localizacao = new Localizacao(localizacao.lat, localizacao.lng);
-        this._carro = new Carro(carro.nome, carro.consumo);
+        this._carro = new Carro(carro.modelo, carro.consumo);
         Object.freeze(this);
     }
 
@@ -21,6 +21,6 @@ class User{
 
 
     imprime_user(){
-        console.log(`${this._nome} tem um ${this._carro.nome}`);
+        console.log(`${this._nome} tem um ${this._carro.modelo}`);
     }
 }
