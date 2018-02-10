@@ -33,20 +33,42 @@
     </nav>
     
     <div class="container">
-        <form class='pt-3' onsubmit="carroController.adiciona(event)">
-            <div class="form-group">
-                <label for="modelo_carro">Modelo do carro</label>
-                <input type="text" class="form-control" id="modelo_carro" aria-describedby="modeloHelp" placeholder="Digite seu modelo de carro">
-            </div>
-            <div class="form-group">
-                    <label for="marca_carro">Marca do carro</label>
-                    <input type="text" class="form-control" id="marca_carro" aria-describedby="marcaHelp" placeholder="Digite a marca do seu carro">
-            </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
+        
     </div>
 
-    <div id="tabela_carros"></div>
+    <div class='my-3 text-center'>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCarro">
+            Adicionar novo carro
+        </button>
+    </div>
+
+    <div class="modal fade" id="modalCarro" tabindex="-1" role="dialog" aria-labelledby="modalCarroLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCarroLabel">Adicionar novo carro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="carroController.adiciona(event)">
+                        <div class="form-group">
+                            <label for="modelo_carro">Modelo do carro</label>
+                            <input type="text" class="form-control" id="modelo_carro" aria-describedby="modeloHelp" placeholder="Digite seu modelo de carro">
+                        </div>
+                        <div class="form-group">
+                                <label for="marca_carro">Marca do carro</label>
+                                <input type="text" class="form-control" id="marca_carro" aria-describedby="marcaHelp" placeholder="Digite a marca do seu carro">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3" id="tabela_carros"></div>
 
 
 
